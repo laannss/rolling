@@ -17,7 +17,7 @@ public:
 	double getVolume();
 
 	/* Mutators */
-	void setRadius();
+	void Sphere::setRadius(double newRad);
 
 	/* I/O */
 	void Sphere::display(ostream & out) const;
@@ -26,5 +26,6 @@ public:
 private:
 	double Radius;
 };
+
 ostream & operator<<(ostream & out, const Sphere & s); 
 istream & operator >> (istream & in, Sphere & s);
