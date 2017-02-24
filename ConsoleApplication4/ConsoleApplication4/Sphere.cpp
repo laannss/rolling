@@ -66,7 +66,7 @@ void Sphere::setCircumference(double newCircumference) {
 }
 void Sphere::setArea(double newArea) {
 	if (newArea > 0) {
-		Radius = pow((newArea/(4.0*PI)), 1/2);
+		Radius = sqrt(newArea / (4.0*PI));
 	}
 	else {
 		cerr << "*** Invalid input for Sphere object ***\n";
@@ -74,7 +74,7 @@ void Sphere::setArea(double newArea) {
 }
 void Sphere::setVolume(double newVolume) {
 	if (newVolume > 0) {
-		Radius = pow((newVolume*3.0/(4.0*PI)),1/3);
+		Radius = cbrt(newVolume*3.0 / (4.0*PI));
 	}
 	else {
 		cerr << "*** Invalid input for Sphere object ***\n";

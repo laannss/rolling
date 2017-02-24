@@ -4,12 +4,23 @@ using namespace std;
 int main() {
 
 	Sphere unitSphere;
-	Sphere mySphere(5.1);
+	Sphere mySphere(-65.1);
 	cout << unitSphere << endl;
-	mySphere.setRadius(4.5);
-	cout << mySphere.getDiameter() << endl;
-	
 
+	mySphere.setRadius(-64.5);
+	cout << mySphere.getRadius() << endl;
+
+	mySphere.setDiameter(-65.5);
+	cout << mySphere.getDiameter() << endl;
+
+	mySphere.setCircumference(-66.5);
+	cout << mySphere.getCircumference() << endl;
+
+	mySphere.setArea(-76.5);
+	cout << mySphere.getArea() << endl;
+
+	mySphere.setVolume(-621);
+	cout << mySphere.getVolume() << endl;
 
 	getchar();
 }
