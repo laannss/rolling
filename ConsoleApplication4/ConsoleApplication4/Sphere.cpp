@@ -5,8 +5,8 @@ using namespace std;
 
 
 Sphere::Sphere()
+	: Radius(1)
 {
-	Radius = 1.0;
 }
 
 
