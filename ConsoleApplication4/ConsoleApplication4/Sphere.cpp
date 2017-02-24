@@ -15,7 +15,8 @@ Sphere::Sphere(double initRadius)
 		Radius = initRadius;
 	}
 	else {
-		cout << "Invalid" << endl;
+		cerr << "*** Invalid input for Sphere object, created with default value of 1 ***\n";
+		Radius = 1;
 	}
 }
 
@@ -29,25 +30,12 @@ double Sphere::getDiameter()
 {
 	return Radius*2;
 }
-double Sphere::getCircumference()
-{
-	return 2*PI*Radius;
-}
-double Sphere::getArea()
-{
-	return PI*Radius*Radius;
-}
-double Sphere::getVolume()
-{
-	return PI*Radius*Radius*Radius* 4 / 3;
-}
-
-
 void Sphere::display(ostream & out) const
 {
 	out << Radius;
 }
-void Sphere::read(istream & in)
+
+void Sphere::write(istream & in)
 {
 	double rad;
 	in >> rad;
@@ -56,15 +44,12 @@ void Sphere::read(istream & in)
 		Radius = rad;
 	}
 	else {
-		cout << "Invalid" << endl;
-	}
-	
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}	
 }
-
 
 ostream & operator<<(ostream & out, const Sphere & s) {
 	s.display(out);
 	return out;
 }
 //ostream & operator >> (ostream & out, const Sphere & s) 
-

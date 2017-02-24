@@ -10,21 +10,22 @@ public:
 	Sphere(double initRadius);
 
 	/* Accessors */
-	double getRadius();
-	double getDiameter();
-	double getCircumference();
-	double getArea();
-	double getVolume();
+	double Sphere::getRadius() const;
+	double Sphere::getDiameter() const;
+	double Sphere::getCircumference() const;
+	double Sphere::getArea() const;
+	double Sphere::getVolume() const;
 
 	/* Mutators */
-	void setRadius();
+	void Sphere::setRadius(double newRad);
 
 	/* I/O */
 	void Sphere::display(ostream & out) const;
-	void Sphere::read(istream & in);
+	void Sphere::write(istream & in);
 
 private:
 	double Radius;
 };
-ostream & operator<<(ostream & out, const Sphere & s);
-ostream & operator>>(ostream & out, const Sphere & s);
+
+ostream & operator<<(ostream & out, const Sphere & s); 
+istream & operator >> (istream & in, Sphere & s);
