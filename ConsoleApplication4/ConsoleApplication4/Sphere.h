@@ -10,11 +10,11 @@ public:
 	Sphere(double initRadius);
 
 	/* Accessors */
-	double getRadius();
-	double getDiameter();
-	double getCircumference();
-	double getArea();
-	double getVolume();
+	double Sphere::getRadius() const;
+	double Sphere::getDiameter() const;
+	double Sphere::getCircumference() const;
+	double Sphere::getArea() const;
+	double Sphere::getVolume() const;
 
 	/* Mutators */
 	void Sphere::setRadius(double newRad);
