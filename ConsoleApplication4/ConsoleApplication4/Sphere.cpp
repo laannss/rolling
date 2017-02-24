@@ -110,3 +110,23 @@ istream & operator >> (istream & in, Sphere & s) {
 	s.write(in);
 	return in;
 }
+
+/***** Relational operators *****/
+bool operator<(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() < s2.getRadius();
+}
+bool operator>(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() > s2.getRadius();
+}
+bool operator==(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() == s2.getRadius();
+}
+bool operator<=(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() <= s2.getRadius();
+}
+bool operator>=(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() >= s2.getRadius();
+}
+bool operator!=(const Sphere & s1, const Sphere & s2) {
+	return s1.getRadius() != s2.getRadius();
+}
