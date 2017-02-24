@@ -26,6 +26,6 @@ public:
 private:
 	double Radius;
 };
-
+/* >> and << */
 ostream & operator<<(ostream & out, const Sphere & s); 
 istream & operator >> (istream & in, Sphere & s);

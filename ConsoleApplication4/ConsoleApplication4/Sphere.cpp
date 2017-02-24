@@ -2,6 +2,7 @@
 using namespace std;
 #include "Sphere.h"
 #define PI 3.14
+
 /* Default and explicit initiliziation*/
 Sphere::Sphere()
 	: Radius(1)
@@ -30,12 +31,12 @@ double Sphere::getCircumference() const{
 	return (2 * PI * Radius);
 }
 double Sphere::getArea() const{
-	return (PI * Radius * Radius);
+	return (4 * PI * Radius * Radius);
 }
 double Sphere::getVolume() const{
-	return (PI* Radius * Radius * Radius * 4.0 / 3.0);
+	return (PI * Radius * Radius * Radius * 4.0 / 3.0);
 }
-/* Mutator */
+/* Mutators */
 void Sphere::setRadius(double newRad) {
 	if (newRad > 0) {
 		Radius = newRad;
@@ -62,7 +63,9 @@ void Sphere::write(istream & in)
 		cerr << "*** Invalid input for Sphere object ***\n";
 	}
 }
+
 /* >> and << */
+
 ostream & operator<<(ostream & out, const Sphere & s) {
 	s.display(out);
 	return out;
