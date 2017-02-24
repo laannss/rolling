@@ -14,14 +14,14 @@ Sphere::Sphere(double initRadius)
 		Radius = initRadius;
 	}
 	else {
-		cout << "Invalid" << endl;
+		cerr << "*** Invalid input for Sphere object ***\n";
 	}
 }
 void Sphere::display(ostream & out) const
 {
 	out << Radius;
 }
-void Sphere::read(istream & in)
+void Sphere::write(istream & in)
 {
 	double rad;
 	in >> rad;
@@ -30,7 +30,7 @@ void Sphere::read(istream & in)
 		Radius = rad;
 	}
 	else {
-		cout << "Invalid" << endl;
+		cerr << "*** Invalid input for Sphere object ***\n";
 	}
 	
 }
@@ -40,4 +40,7 @@ ostream & operator<<(ostream & out, const Sphere & s) {
 	s.display(out);
 	return out;
 }
-//ostream & operator >> (ostream & out, const Sphere & s) 
+istream & operator >> (istream & in, Sphere & s) {
+	s.write(in);
+	return in;
+}

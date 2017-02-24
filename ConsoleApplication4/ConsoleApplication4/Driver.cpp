@@ -4,7 +4,10 @@ using namespace std;
 
 int main() {
 	Sphere test;
-	Sphere test2 = 2;
-	cout << test2;
+	Sphere test2 = -2;
+	Sphere test3 = 2.1;
+	cout << test << endl;
+	cout << test2 << endl;
+	cout << test3 << endl;
 	getchar();
 }

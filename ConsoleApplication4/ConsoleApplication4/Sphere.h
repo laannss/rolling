@@ -21,10 +21,10 @@ public:
 
 	/* I/O */
 	void Sphere::display(ostream & out) const;
-	void Sphere::read(istream & in);
+	void Sphere::write(istream & in);
 
 private:
 	double Radius;
 };
-ostream & operator<<(ostream & out, const Sphere & s);
-ostream & operator>>(ostream & out, const Sphere & s);
+ostream & operator<<(ostream & out, const Sphere & s); 
+istream & operator >> (istream & in, Sphere & s);
