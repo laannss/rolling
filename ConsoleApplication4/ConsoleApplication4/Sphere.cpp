@@ -45,6 +45,25 @@ void Sphere::setRadius(double newRadius) {
 		cerr << "*** Invalid input for Sphere object ***\n";
 	}
 }
+void Sphere::setDiameter(double newDiameter) {
+	if (newDiameter > 0){
+		Radius = newDiameter / 2.0;
+	}
+	else {
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}
+
+}
+void Sphere::setCircumference(double newCircumference) {
+	if (newCircumference > 0) {
+		Radius = newCircumference / (2.0*PI);
+	}
+	else {
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}
+
+
+}
 void Sphere::setArea(double newArea) {
 	if (newArea > 0) {
 		Radius = pow((newArea/(4.0*PI)), 1/2);
