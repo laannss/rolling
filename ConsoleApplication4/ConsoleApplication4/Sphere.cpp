@@ -37,9 +37,25 @@ double Sphere::getVolume() const{
 	return (PI * Radius * Radius * Radius * 4.0 / 3.0);
 }
 /* Mutators */
-void Sphere::setRadius(double newRad) {
-	if (newRad > 0) {
-		Radius = newRad;
+void Sphere::setRadius(double newRadius) {
+	if (newRadius > 0) {
+		Radius = newRadius;
+	}
+	else {
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}
+}
+void Sphere::setArea(double newArea) {
+	if (newArea > 0) {
+		Radius = pow((newArea/(4.0*PI)), 1/2);
+	}
+	else {
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}
+}
+void Sphere::setVolume(double newVolume) {
+	if (newVolume > 0) {
+		Radius = pow((newVolume*3.0/(4.0*PI)),1/3);
 	}
 	else {
 		cerr << "*** Invalid input for Sphere object ***\n";

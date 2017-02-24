@@ -18,6 +18,10 @@ public:
 
 	/* Mutators */
 	void Sphere::setRadius(double newRad);
+	void Sphere::setDiameter(double newDiameter);
+	void Sphere::setCircumference(double newCirc);
+	void Sphere::setArea(double newArea);
+	void Sphere::setVolume(double newVolume);
 
 	/* I/O */
 	void Sphere::display(ostream & out) const;
