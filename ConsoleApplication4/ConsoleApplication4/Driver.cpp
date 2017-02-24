@@ -10,8 +10,7 @@ int main() {
 	cout << test << endl;
 	cout << test2 << endl;
 	cout << test3 << endl;
-	Sphere test2 = 2;
-	cout << test2<<endl	;
+	cout << test2 <<endl;
 	
 	cout << test2.getRadius() << endl;
 	cout << test2.getCircumference() << endl;
