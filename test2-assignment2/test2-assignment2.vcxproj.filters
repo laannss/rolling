@@ -15,15 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Sphere.h">
+    <ClInclude Include="Sphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Driver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Sphere.cpp">
+    <ClCompile Include="Sphere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

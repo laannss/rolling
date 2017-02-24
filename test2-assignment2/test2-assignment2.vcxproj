@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sphere.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sphere.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3FF80BC3-22E2-4049-BDC1-098FFD9B0D55}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,13 +151,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Sphere.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Driver.cpp" />
-    <ClCompile Include="..\..\..\..\Google Drive\Classes\2017 Spring\COMPE260\Assignment 2\ConsoleApplication3\ConsoleApplication3\Sphere.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
