@@ -6,6 +6,7 @@
 
 int main()
 {
+/*ramecvlileba*/
     return 0;
 }
 
