@@ -1,15 +1,27 @@
-// stdafx.h : include file for standard system include files,
-// or project specific include files that are used frequently, but
-// are changed infrequently
-//
+#include <iostream>
+using namespace std;
 
-#pragma once
+class Sphere
+{
+public:
+	/* Default Constructor Radius = 1.0 */
+	Sphere();
+	/* Explicit value constructor */
+	Sphere(double initRadius);
 
-#include "targetver.h"
+	/* Accessors */
+	double getRadius();
+	double getDiameter();
+	double getCircumference();
+	double getArea();
+	double getVolume();
 
-#include <stdio.h>
-#include <tchar.h>
+	/* Mutators */
+	void setRadius();
 
+	/* I/O */
+	void display(ostream & out) const;
 
-
-// TODO: reference additional headers your program requires here
+private:
+	double Radius;
+};

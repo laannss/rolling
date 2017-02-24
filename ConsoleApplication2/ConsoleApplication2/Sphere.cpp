@@ -1,8 +1,16 @@
-// stdafx.cpp : source file that includes just the standard includes
-// ConsoleApplication2.pch will be the pre-compiled header
-// stdafx.obj will contain the pre-compiled type information
+#include <iostream>
+using namespace std;
+#include "Sphere.h"
 
-#include "stdafx.h"
 
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file
+
+Sphere::Sphere()
+{
+	Radius = 1.0;
+}
+
+
+Sphere::Sphere(double initRadius)
+{
+	Radius = initRadius;
+}
