@@ -5,4 +5,6 @@ using namespace std;
 int main() {
 	Sphere test;
 	Sphere test2 = 2;
+	cout << test2;
+	getchar();
 }

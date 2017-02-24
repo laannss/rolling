@@ -20,8 +20,11 @@ public:
 	void setRadius();
 
 	/* I/O */
-	void display(ostream & out) const;
+	void Sphere::display(ostream & out) const;
+	void Sphere::read(istream & in);
 
 private:
 	double Radius;
 };
+ostream & operator<<(ostream & out, const Sphere & s);
+ostream & operator>>(ostream & out, const Sphere & s);
