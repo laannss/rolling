@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Sphere.h"
-# define PI	3.14
+#define PI	3.14
 
 Sphere::Sphere()
 	: Radius(1)
@@ -19,12 +19,18 @@ Sphere::Sphere(double initRadius)
 		Radius = 1;
 	}
 }
+void Sphere::setRadius(double newRad){
+	if (newRad > 0) {
+		Radius = newRad;
+	}
+	else {
+		cerr << "*** Invalid input for Sphere object ***\n";
+	}
 
-//
-double Sphere::getRadius()
-{
-	return Radius;
-}
+	double Sphere::getRadius()
+	{
+		return Radius;
+	}
 
 double Sphere::getDiameter()
 {
@@ -52,4 +58,8 @@ ostream & operator<<(ostream & out, const Sphere & s) {
 	s.display(out);
 	return out;
 }
-//ostream & operator >> (ostream & out, const Sphere & s) 
+
+istream & operator >> (istream & in, Sphere & s) {
+	s.write(in);
+	return in;
+}
