@@ -34,7 +34,7 @@ private:
 ostream & operator<<(ostream & out, const Sphere & s); 
 istream & operator >> (istream & in, Sphere & s);
 
-/* Relational Operators */
+/* Bool Operators */
 bool operator<(const Sphere & s1, const Sphere & s2);
 bool operator>(const Sphere & s1, const Sphere & s2);
 bool operator==(const Sphere & s1, const Sphere & s2);
