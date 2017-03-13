@@ -149,11 +149,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\NewRepo\ConsoleApplication2\ConsoleApplication2\driver.cpp" />
-    <ClCompile Include="..\..\..\NewRepo\ConsoleApplication2\ConsoleApplication2\LinkedList.cpp" />
+    <ClCompile Include="driver.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\NewRepo\ConsoleApplication2\ConsoleApplication2\LinkedList.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
