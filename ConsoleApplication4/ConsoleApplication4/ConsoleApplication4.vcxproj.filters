@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sphere.h">
+    <ClInclude Include="..\..\Assignment2\Assignment2\LinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sphere.cpp">
+    <ClCompile Include="..\..\Assignment2\Assignment2\LinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Driver.cpp">
+    <ClCompile Include="..\..\Assignment2\Assignment2\driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
