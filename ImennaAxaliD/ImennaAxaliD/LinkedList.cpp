@@ -6,53 +6,58 @@ using namespace std;
 // Get Nth function
 ListElement LinkedList::GetNth(int a)const
 {
+	//Assert that range is (0; length-1)
+	int length = this->length() - 1;
+	assert(a >= 0 && a <= length);
 	int counter = 0;
 	LinkedList::NodePointer current = head;
-	while ((counter++ < a) && ((current = current->next) != 0)) {
 
-	}
-	assert(counter != a);
-
-
-
+	// while counter is less than given value, traverse.
+	while ((counter++ < a) && ((current = current->next) != 0)) {}
+	
+	//Return data at node where we traversed.
 	return current->data;
 }
 
-int LinkedList::length() const{
+
+//Counts the amount of elements in the list and returns it.
+int LinkedList::length() const {
 	LinkedList::NodePointer current = head;
-	int l = 0;
+	int length = 0;
+
+	//While current pointer is not NULL, increment counter(length) and traverse.
 	while (current != 0) {
-		l++;
+		length++;
 		current = current->next;
 	}
 
-	return l;
 
-
+	return length;
 }
 
-LinkedList::NodePointer LinkedList:: split() //The definition did not work any other way.
+// The split function
+LinkedList::NodePointer LinkedList:: split()
 {
 	int length = this->length();
-	int counter = 0;
+	int counter = 1;
 	LinkedList::NodePointer current = head, returnPointer;
-	//assert(length < 2);
-
+	assert(length >= 2);
+	
+	
 	// Length of first half that will be left in the list, split point.
 	length = (length + 1) / 2;
 	current = head;
-	while (counter < length - 1) {
+
+	//Traverse to the node where split happens.
+	while (counter != length) {
 		current = current->next;
 		counter++;
 	}
+	//Save the  ->next pointer of last element as return value and set the same pointer to NULL.
 	returnPointer = current->next;
 	current->next = 0;
 	return returnPointer;
 }
-
-
-//Split function
-
 
 
 //Default Constructor
@@ -60,9 +65,11 @@ LinkedList::LinkedList()
 	: head(0)
 {}
 
-//Inserts value at the end of linked list.
+//Inserts value at the position specified by second parameter.
 void LinkedList::insert(const ListElement value, int position) {
 	int length = this->length();
+
+	//Make sure that position is in the given range.
 	assert(position > length - 1);
 	LinkedList::NodePointer current = head, temp;
 	int currentPosition = 0;
@@ -95,7 +102,9 @@ bool LinkedList::empty() const {
 void LinkedList::display(ostream & out) const {
 	LinkedList::NodePointer pointer;
 	for (pointer = head; pointer != 0; pointer = pointer->next)
-		out << pointer->data << endl;
+		out << pointer->data << " ";
+
+	out << endl;
 }
 
 //Assignment Operation for LinkedList objects.
@@ -103,7 +112,7 @@ void LinkedList::display(ostream & out) const {
 const LinkedList & LinkedList:: operator=(const LinkedList::NodePointer rightHandSide) {
 	if (this->head != rightHandSide) {
 		this->~LinkedList();                  // destroy current linked list to free memory.
-		if (rightHandSide->next == 0)	     // empty list
+		if (rightHandSide == 0)	     // empty list
 			head = 0;
 		else {                            
 			this->head = rightHandSide;
@@ -149,6 +158,7 @@ void LinkedList::remove(ListElement a){
 			delete current;
 			current = previous->next;
 		}
+		// If end reached after the previous while loop.
 		if (current == 0)
 			return;
 
@@ -162,11 +172,14 @@ void LinkedList::remove(ListElement a){
 //Copy Constructor
 LinkedList::LinkedList(const LinkedList & original) {
 	head = 0;
+	// If list that is given is not empty, 
 	if (!original.empty()) {
+
 		LinkedList::NodePointer currentOriginal = original.head, currentThis;
+		//Copy headnode data value.
 		head = new LinkedList::Node(currentOriginal->data);
 		currentThis = head;
-
+		//Traverse and copy while end not reached.
 		while ((currentOriginal = currentOriginal->next) != 0) {
 			currentThis->next = new LinkedList::Node(currentOriginal->data);
 			currentThis = currentThis->next;
