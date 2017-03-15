@@ -15,10 +15,7 @@ public:
 	LinkedList(const LinkedList & original);
 	//Destructor
 	~LinkedList();
-
-	//Assignment Operation for LinkedList objects.
-	const LinkedList & operator= (const LinkedList & rightHandSide);
-
+	
 	//Get Nth Function
 	ListElement GetNth(int a)const;
 
@@ -27,16 +24,21 @@ public:
 	First half will be left in the list that is calling the function.
 	Second half will be stored in the list that is calling the function.
 	------------------------------------------------------------------*/
-	void split(LinkedList & secondList);
-
+	
 	//Check if empty
 	bool empty() const;
 
+	//Returns 1 if value removed, returns 0 if not.
+	void remove(ListElement a);
+
 	//Inserts value at the end of linked list.
-	void insert(const ListElement & value);
+	void insert(const ListElement value, int position);
 
 	//Display contents of the linked list
 	void display(ostream & out) const;
+
+	int length() const;
+
 
 	//Node Clas
 	class Node
@@ -50,6 +52,12 @@ public:
 	};
 	typedef Node * NodePointer;
 	NodePointer head;
+
+	NodePointer split();
+
+	//Assignment Operation for LinkedList objects.
+	const LinkedList & operator= (const LinkedList::NodePointer rightHandSide);
 };
+
 
 #endif
