@@ -19,11 +19,6 @@ public:
 	//Get Nth Function
 	ListElement GetNth(int a)const;
 
-
-	/*-----------------------------------------------------------------
-	First half will be left in the list that is calling the function.
-	Second half will be stored in the list that is calling the function.
-	------------------------------------------------------------------*/
 	
 	//Check if empty
 	bool empty() const;
@@ -53,6 +48,7 @@ public:
 	typedef Node * NodePointer;
 	NodePointer head;
 
+	// Splits the current list and returns the second half.
 	NodePointer split();
 
 	//Assignment Operation for LinkedList objects.
